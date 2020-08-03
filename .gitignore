@@ -1,5 +1,8 @@
-g  
-
+# Engine Files
+*.log
+!deps/bin/premake/  
+bin-int/
+**/bin/
 
 # Prerequisites
 *.d
@@ -30,7 +33,6 @@ g
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
 
