@@ -14,6 +14,8 @@ workspace "DXMaker"
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
     include "deps/imgui"
+    include "deps/dxerr"
+    include "deps/dxtex"
 
     project "DXMaker"
         location "DXMaker"
@@ -36,14 +38,18 @@ workspace "DXMaker"
 
         links
         {
-            "ImGui"
+            "ImGui",
+            "DxErr",
+            "DxTex"
         }
 
         includedirs
         {
             "%{prj.name}/src",
             "deps/spdlog/include",
-            "deps/imgui"
+            "deps/imgui",
+            "deps/dxerr",
+            "deps/dxtex"
         }
 
         filter "system:windows"
@@ -89,14 +95,18 @@ workspace "DXMaker"
         links
         {
             "DXMaker",
-            "ImGui"
+            "ImGui",
+            "DxErr",
+            "DxTex"
         }
 
         includedirs
         {
             "DXMaker/src",
             "deps/spdlog/include",
-            "deps/imgui"
+            "deps/imgui",
+            "deps/dxerr",
+            "deps/dxtex"
         }
 
         filter "system:windows"

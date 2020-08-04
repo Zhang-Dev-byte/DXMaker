@@ -29,8 +29,20 @@ namespace DX {
 
 int main(int, char**) {
 	DX::Log::Init();
+	DX::Application::SetWindow(DX::Window("DXMaker", 1280, 720));
+
 	auto app = DX::CreateApplication();
 	DX::AttachLayers();
+
+	while (!DX::Application::GetWindow().ShouldClose()) {
+		if (DX::Application::GetWindow().Message()) {
+			DX::Application::GetWindow().ProcessMessage();
+
+			continue;
+		}
+
+		DX::UpdateLayers();
+		DX::RenderLayers();
+	}
 	delete app;
-	while (true);
 }

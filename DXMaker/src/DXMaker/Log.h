@@ -18,18 +18,18 @@ namespace DX {
 }
 
 // Core log macros
-#define XE_CORE_TRACE(...)    ::DX::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define XE_CORE_INFO(...)     ::DX::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define XE_CORE_WARN(...)     ::DX::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define XE_CORE_ERROR(...)    ::DX::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define XE_CORE_CRITICAL(...) ::DX::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define DX_CORE_TRACE(...)    ::DX::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define DX_CORE_INFO(...)     ::DX::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define DX_CORE_WARN(...)     ::DX::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define DX_CORE_ERROR(...)    ::DX::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define DX_CORE_CRITICAL(...) ::DX::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
-#define XE_TRACE(...)         ::DX::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define XE_INFO(...)          ::DX::Log::GetClientLogger()->info(__VA_ARGS__)
-#define XE_WARN(...)          ::DX::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define XE_ERROR(...)         ::DX::Log::GetClientLogger()->error(__VA_ARGS__)
-#define XE_CRITICAL(...)      ::DX::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define DX_TRACE(...)         ::DX::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define DX_INFO(...)          ::DX::Log::GetClientLogger()->info(__VA_ARGS__)
+#define DX_WARN(...)          ::DX::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define DX_ERROR(...)         ::DX::Log::GetClientLogger()->error(__VA_ARGS__)
+#define DX_CRITICAL(...)      ::DX::Log::GetClientLogger()->critical(__VA_ARGS__)
 
 namespace DX {
 	class DX_API Debug {

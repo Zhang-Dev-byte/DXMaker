@@ -4,3 +4,4 @@
 #include "DXMaker/Log.h"
 #include "DXMaker/Layer.h"
 #include "DXMaker/LayerStack.h"
+#include "DXMaker/Window.h"
