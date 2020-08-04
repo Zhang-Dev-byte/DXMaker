@@ -1,5 +1,6 @@
 #include "dxpch.h"
 #include "Window.h"
+#include "Event/Keyboard.h"
 
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
 
@@ -10,6 +11,20 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
         PostQuitMessage(0);
         return 0;
     } break;
+    case WM_KEYDOWN:
+        DX::Keyboard::OnKeyPressed((int)wParam);
+        break;
+    case WM_KEYUP:
+        DX::Keyboard::OnKeyReleased((int)wParam);
+
+
+        break;
+    case WM_SYSKEYDOWN:
+        DX::Keyboard::OnKeyPressed((int)wParam);
+        break;
+    case WM_SYSKEYUP:
+        DX::Keyboard::OnKeyReleased((int)wParam);
+        break;
     }
 
     return DefWindowProc(hWnd, message, wParam, lParam);

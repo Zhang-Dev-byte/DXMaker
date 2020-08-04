@@ -28,7 +28,7 @@ workspace "DXMaker"
         objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
         pchheader "dxpch.h"
-        pchsource "DXMaker/src/DXMaker/dxpch.cpp"
+        pchsource "DXMaker/src/dxpch.cpp"
 
         files
         {

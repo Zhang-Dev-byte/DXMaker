@@ -1,5 +1,5 @@
 #pragma once
-#include "Core.h"
+#include "DXMaker/Core.h"
 #ifdef DX_PLATFORM_WINDOWS
 #include <Windows.h>
 #include <windowsx.h>
@@ -14,4 +14,5 @@
 #include <array>
 #include <fstream>
 #include <sstream>
+#include <queue>
 #endif

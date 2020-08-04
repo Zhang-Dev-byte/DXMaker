@@ -36,23 +36,23 @@ namespace DX {
 	public:
 		template<typename T, typename... Args>
 		static void Log(T t, Args... args) {
-			XE_INFO(t, args...);
+			DX_INFO(t, args...);
 		}
 		template<typename T, typename... Args>
 		static void LogError(T t, Args... args) {
-			XE_ERROR(t, args...);
+			DX_ERROR(t, args...);
 		}
 		template<typename T, typename... Args>
 		static void LogWarn(T t, Args... args) {
-			XE_WARN(t, args...);
+			DX_WARN(t, args...);
 		}
 		template<typename T, typename... Args>
 		static void LogCritical(T t, Args... args) {
-			XE_CRITICAL(t, args...);
+			DX_CRITICAL(t, args...);
 		}
 		template<typename T, typename... Args>
 		static void LogTrace(T t, Args... args) {
-			XE_TRACE(t, args...);
+			DX_TRACE(t, args...);
 		}
 	};
 }
