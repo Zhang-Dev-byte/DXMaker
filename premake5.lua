@@ -65,17 +65,15 @@ workspace "DXMaker"
 		postbuildcommands
 		{
 			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
-		}
-
-        filter "configurations:Debug"
-            defines "DX_DEBUG"
-            runtime "Debug"
-            symbols "On"
-
-        filter "configurations:Release"
-            defines "DX_RELEASE"
-            runtime "Release"
-            optimize "On"
+        }
+        
+        filter "system:windows"
+            systemversion "latest"
+            cppdialect "C++17"
+            staticruntime "On"
+            
+        filter { "system:windows", "configurations:Release" }
+            buildoptions "/MT"
 
     project "Sandbox"
         location "Sandbox"
@@ -110,20 +108,18 @@ workspace "DXMaker"
         }
 
         filter "system:windows"
-		cppdialect "C++17"
-        systemversion "latest"
+            cppdialect "C++17"
+            systemversion "latest"
         
         defines
 		{
 			"DX_PLATFORM_WINDOWS"
         }
         
-        filter "configurations:Debug"
-            defines "DX_DEBUG"
-            runtime "Debug"
-            symbols "On"
-
-        filter "configurations:Release"
-            defines "DX_RELEASE"
-            runtime "Release"
-            optimize "On"
+        filter "system:windows"
+            systemversion "latest"
+            cppdialect "C++17"
+            staticruntime "On"
+            
+        filter { "system:windows", "configurations:Release" }
+            buildoptions "/MT"
