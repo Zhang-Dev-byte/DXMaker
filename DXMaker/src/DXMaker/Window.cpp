@@ -71,3 +71,8 @@ bool DX::Window::ShouldClose()
 {
     return (msg.message == WM_QUIT);
 }
+
+HWND& DX::Window::GetHWND()
+{
+    return hWnd;
+}

@@ -8,6 +8,7 @@ namespace DX {
 		bool Message();
 		void ProcessMessage();
 		bool ShouldClose();
+		HWND& GetHWND();
 	private:
 		std::string title;
 		int width;

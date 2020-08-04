@@ -15,4 +15,8 @@
 #include <fstream>
 #include <sstream>
 #include <queue>
+#include <wrl.h>
+namespace wrl = Microsoft::WRL;
+#include <d3d11.h>
+#pragma comment (lib, "d3d11.lib")
 #endif

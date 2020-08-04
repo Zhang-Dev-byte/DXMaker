@@ -6,3 +6,6 @@
 #include "DXMaker/LayerStack.h"
 #include "DXMaker/Window.h"
 #include "DXMaker/Event/Keyboard.h"
+#include "DXMaker/Directx/DirectxContext.h"
+#include "DXMaker/RendererAPI.h"
+#include "DXMaker/Context.h"

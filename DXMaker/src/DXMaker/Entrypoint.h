@@ -3,6 +3,7 @@
 #include "Application.h"
 #include "Log.h"
 #include "LayerStack.h"
+#include "Context.h"
 namespace DX {
 	extern LayerStack layerStack = LayerStack();
 	extern Application* CreateApplication();
@@ -31,6 +32,8 @@ int main(int, char**) {
 	DX::Log::Init();
 	DX::Application::SetWindow(DX::Window("DXMaker", 1280, 720));
 
+	DX::Context c(&DX::Application::GetWindow());
+
 	auto app = DX::CreateApplication();
 	DX::AttachLayers();
 
@@ -42,7 +45,9 @@ int main(int, char**) {
 		}
 
 		DX::UpdateLayers();
+		c.ClearColor(0, 0, 0, 1);
 		DX::RenderLayers();
+		c.SwapBuffers();
 	}
 	delete app;
 }
